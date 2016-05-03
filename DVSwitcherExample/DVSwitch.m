@@ -17,7 +17,6 @@
 @property (strong, nonatomic) void (^handlerBlock)(NSUInteger index);
 @property (strong, nonatomic) void (^willBePressedHandlerBlock)(NSUInteger index);
 
-@property (strong, nonatomic) UIView *backgroundView;
 @property (strong, nonatomic) UIView *sliderView;
 
 @property (nonatomic) NSInteger selectedIndex;
@@ -71,7 +70,6 @@
         label.text = string;
         label.font = self.font;
         label.adjustsFontSizeToFitWidth = YES;
-        label.adjustsLetterSpacingToFitWidth = YES;
         label.textAlignment = NSTextAlignmentCenter;
         label.textColor = self.labelTextColorOutsideSlider;
         [self.backgroundView addSubview:label];
@@ -95,7 +93,6 @@
         label.text = string;
         label.font = self.font;
         label.adjustsFontSizeToFitWidth = YES;
-        label.adjustsLetterSpacingToFitWidth = YES;
         label.textAlignment = NSTextAlignmentCenter;
         label.textColor = self.labelTextColorInsideSlider;
         [self.sliderView addSubview:label];
@@ -224,7 +221,7 @@
 - (void)layoutSubviews
 {
     self.backgroundView.layer.cornerRadius = self.cornerRadius;
-    self.sliderView.layer.cornerRadius = self.cornerRadius - 1;
+    self.sliderView.layer.cornerRadius = self.cornerRadius;
     
     self.backgroundView.backgroundColor = self.backgroundColor;
     self.sliderView.backgroundColor = self.sliderColor;
@@ -266,7 +263,7 @@
         self.willBePressedHandlerBlock(selectedIndex);
     }
     
-    [UIView animateWithDuration:0.25 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+    [UIView animateWithDuration:0.25 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         
         CGFloat sliderWidth = self.frame.size.width / [self.strings count];
         
