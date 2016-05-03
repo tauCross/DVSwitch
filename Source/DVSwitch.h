@@ -17,6 +17,8 @@
 @property (strong, nonatomic) UIFont *font; // default is nil
 @property (nonatomic) CGFloat cornerRadius; // defaults to 12
 @property (nonatomic) CGFloat sliderOffset; // slider offset from background, top, bottom, left, right
+@property (strong, nonatomic) UIView *backgroundView;
+
 
 + (instancetype)switchWithStringsArray:(NSArray *)strings;
 - (instancetype)initWithStringsArray:(NSArray *)strings;
