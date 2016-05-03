@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "DVSwitch"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Customizable control based on UISwitch and UISegmentedControl written in Objective-C"
 
   s.description  = <<-DESC
@@ -16,12 +16,12 @@ Pod::Spec.new do |s|
 
 DESC
 
-  s.homepage     = "https://github.com/Voley/DVSwitch"
+  s.homepage     = "https://github.com/tauCross/DVSwitch"
   s.screenshots  = "http://i.imgur.com/ZrTCGfd.png", "http://i.imgur.com/rX0O15a.png"
   s.license      = { :type => "MIT", :file => "LICENSE" }
-  s.author             = { "Dmitry Volevodz" => "dimavolevodz@gmail.com" }
-  s.platform     = :ios, "6.0"
-  s.source       = { :git => "https://github.com/Voley/DVSwitch.git", :tag => "1.0.0" }
+  s.author             = { "tauCross" => "mstsccls@gmail.com" }
+  s.platform     = :ios, "7.0"
+  s.source       = { :git => "https://github.com/tauCross/DVSwitch.git", :tag => "1.0.1" }
 
   s.source_files  = "Source", "Source/**/*.{h,m}"
   s.requires_arc = true
